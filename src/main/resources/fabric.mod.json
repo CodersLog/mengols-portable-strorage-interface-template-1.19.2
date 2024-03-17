@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "mpsi",
+	"version": "${version}",
+	"name": "Mengols Portable Strorage Interface",
+	"description": "Mod for the mengol server implementing the portable storage interface",
+	"authors": [
+		"CodersLog"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mpsi/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.coders.MengolsPortableStrorageInterface"
+		],
+		"client": [
+			"com.coders.MengolsPortableStrorageInterfaceClient"
+		],
+		"fabric-datagen": [
+			"com.coders.MengolsPortableStrorageInterfaceDataGenerator"
+		]
+	},
+	"mixins": [
+		"mpsi.mixins.json",
+		{
+			"config": "mpsi.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.19.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
